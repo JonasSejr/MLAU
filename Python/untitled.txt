@@ -1,0 +1,1 @@
+Should we be able to derive negative log likelyhood at the exam and derive gradient formula?
