@@ -20,26 +20,26 @@
     <favorites_list name="Python" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="test_logisticregression.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Handin 1/test_logisticregression.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="logisticregression.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Handin 1/logisticregression.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="91" column="39" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logisticregression.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Handin 1/logisticregression.py">
+      <file leaf-file-name="test_logisticregression.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Handin 1/test_logisticregression.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+            <state relative-caret-position="467">
+              <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,7 +104,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -175,6 +174,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -190,30 +190,72 @@
       <recent name="C:\gitprojects\MLAU\Python\src\Exercise Week1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Test Handin 1">
-    <configuration default="false" name="test_logisticregression" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.logisticregression">
+    <configuration default="false" name="logisticregression" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Handin 1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Handin 1/logisticregression.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Nosetests in Batch_grad_descentTestCase" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="C:\Anaconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/Handin 1" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
-      <option name="SCRIPT_NAME" value="C:\gitprojects\MLAU\Python\tests\Handin 1\test_logisticregression.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/Handin 1/test_logisticregression.py" />
+      <option name="CLASS_NAME" value="Batch_grad_descentTestCase" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="--nocapture" />
+      <option name="USE_PARAM" value="true" />
       <method />
     </configuration>
-    <configuration default="false" name="Test Handin 1" type="tests" factoryName="Nosetests" temporary="true">
+    <configuration default="false" name="Nosetest Batch_grad_descentTestCase.test_4_points_on_line_with_onedimension_y" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="SDK_HOME" value="C:\Anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/Handin 1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/Handin 1/test_logisticregression.py" />
+      <option name="CLASS_NAME" value="Batch_grad_descentTestCase" />
+      <option name="METHOD_NAME" value="test_4_points_on_line_with_onedimension_y" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="--nocapture" />
+      <option name="USE_PARAM" value="true" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Nosetests in Handin 1 (1)" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="C:\Anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/Handin 1" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -225,16 +267,16 @@
       <option name="TEST_TYPE" value="TEST_FOLDER" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+      <option name="PARAMS" value="--nocapture" />
+      <option name="USE_PARAM" value="true" />
       <method />
     </configuration>
-    <configuration default="false" name="Nosetests in Python (2)" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Nosetests in Handin 1" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="SDK_HOME" value="C:\Anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/Handin 1" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -242,54 +284,12 @@
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="$PROJECT_DIR$" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$/tests/Handin 1" />
       <option name="TEST_TYPE" value="TEST_FOLDER" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Nosetests in Python (3)" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Python" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="$PROJECT_DIR$" />
-      <option name="TEST_TYPE" value="TEST_FOLDER" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Nosetests in test_firstclass" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_firstclass.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+      <option name="PARAMS" value="--nocapture" />
+      <option name="USE_PARAM" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -363,7 +363,7 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Anaconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -376,15 +376,15 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+      <option name="PARAMS" value="--nocapture" />
+      <option name="USE_PARAM" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Anaconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -399,7 +399,7 @@
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+      <option name="USE_PARAM" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="py.test">
@@ -427,19 +427,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.test_logisticregression" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Test Handin 1" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetests in Python (2)" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetests in Python (3)" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetests in test_firstclass" />
+      <item index="0" class="java.lang.String" itemvalue="Python.logisticregression" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetests in Batch_grad_descentTestCase" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetest Batch_grad_descentTestCase.test_4_points_on_line_with_onedimension_y" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetests in Handin 1 (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetests in Handin 1" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Test Handin 1" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetests in test_firstclass" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test_logisticregression" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetests in Python (3)" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetests in Python (2)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.logisticregression" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetests in Handin 1" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetests in Handin 1 (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetest Batch_grad_descentTestCase.test_4_points_on_line_with_onedimension_y" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetests in Batch_grad_descentTestCase" />
       </list>
     </recent_temporary>
   </component>
@@ -460,51 +460,51 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test_Handin_1 - 2016.09.14 at 23h 50m 33s.xml">
-      <configuration name="Test Handin 1" configurationId="tests" />
+    <history-entry file="Nosetest_Batch_grad_descentTestCase_test_4_points_on_line - 2016.09.17 at 11h 51m 12s.xml">
+      <configuration name="Nosetest Batch_grad_descentTestCase.test_4_points_on_line" configurationId="tests" />
     </history-entry>
-    <history-entry file="Test_Handin_1 - 2016.09.14 at 23h 50m 38s.xml">
-      <configuration name="Test Handin 1" configurationId="tests" />
+    <history-entry file="Nosetest_Batch_grad_descentTestCase_test_4_points_on_line_with_onedimension_y - 2016.09.17 at 11h 55m 32s.xml">
+      <configuration name="Nosetest Batch_grad_descentTestCase.test_4_points_on_line_with_onedimension_y" configurationId="tests" />
     </history-entry>
-    <history-entry file="Test_Handin_1 - 2016.09.14 at 23h 52m 34s.xml">
-      <configuration name="Test Handin 1" configurationId="tests" />
+    <history-entry file="Nosetest_Batch_grad_descentTestCase_test_4_points_on_line_with_onedimension_y - 2016.09.17 at 11h 58m 32s.xml">
+      <configuration name="Nosetest Batch_grad_descentTestCase.test_4_points_on_line_with_onedimension_y" configurationId="tests" />
     </history-entry>
-    <history-entry file="Test_Handin_1 - 2016.09.14 at 23h 52m 44s.xml">
-      <configuration name="Test Handin 1" configurationId="tests" />
+    <history-entry file="Nosetest_Batch_grad_descentTestCase_test_4_points_on_line_with_onedimension_y - 2016.09.17 at 11h 59m 56s.xml">
+      <configuration name="Nosetest Batch_grad_descentTestCase.test_4_points_on_line_with_onedimension_y" configurationId="tests" />
     </history-entry>
-    <history-entry file="Test_Handin_1 - 2016.09.14 at 23h 54m 13s.xml">
-      <configuration name="Test Handin 1" configurationId="tests" />
+    <history-entry file="Nosetest_Batch_grad_descentTestCase_test_4_points_on_line_with_onedimension_y - 2016.09.17 at 12h 00m 06s.xml">
+      <configuration name="Nosetest Batch_grad_descentTestCase.test_4_points_on_line_with_onedimension_y" configurationId="tests" />
     </history-entry>
-    <history-entry file="Test_Handin_1 - 2016.09.14 at 23h 56m 01s.xml">
-      <configuration name="Test Handin 1" configurationId="tests" />
+    <history-entry file="Nosetests_in_Batch_grad_descentTestCase - 2016.09.17 at 11h 52m 51s.xml">
+      <configuration name="Nosetests in Batch_grad_descentTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Test_Handin_1 - 2016.09.14 at 23h 56m 51s.xml">
-      <configuration name="Test Handin 1" configurationId="tests" />
+    <history-entry file="Nosetests_in_Batch_grad_descentTestCase - 2016.09.17 at 11h 53m 24s.xml">
+      <configuration name="Nosetests in Batch_grad_descentTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Test_Handin_1 - 2016.09.14 at 23h 57m 54s.xml">
-      <configuration name="Test Handin 1" configurationId="tests" />
+    <history-entry file="Nosetests_in_Batch_grad_descentTestCase - 2016.09.17 at 11h 54m 42s.xml">
+      <configuration name="Nosetests in Batch_grad_descentTestCase" configurationId="tests" />
     </history-entry>
-    <history-entry file="Test_Handin_1 - 2016.09.14 at 23h 58m 53s.xml">
-      <configuration name="Test Handin 1" configurationId="tests" />
+    <history-entry file="Nosetests_in_Handin_1 - 2016.09.17 at 12h 15m 04s.xml">
+      <configuration name="Nosetests in Handin 1" configurationId="tests" />
     </history-entry>
-    <history-entry file="Test_Handin_1 - 2016.09.14 at 23h 59m 00s.xml">
-      <configuration name="Test Handin 1" configurationId="tests" />
+    <history-entry file="Nosetests_in_Handin_1_(1) - 2016.09.17 at 12h 00m 22s.xml">
+      <configuration name="Nosetests in Handin 1 (1)" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27239582" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27447918" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47976878" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3006536" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29956427" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.456427" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4553377" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46078432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45969498" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -527,7 +527,21 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/src/Handin 1/logisticregression.py</url>
+          <line>131</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="38" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
@@ -537,21 +551,56 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/test_firstclass.py">
+    <entry file="file://$PROJECT_DIR$/tests/Handin 1/test_logisticregression.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="374">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Anaconda3/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12892">
+          <caret line="599" column="0" selection-start-line="599" selection-start-column="0" selection-end-line="599" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.py">
+    <entry file="file://$PROJECT_DIR$/src/Handin 1/logisticregression.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Handin 1/test_logisticregression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Handin 1/logisticregression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_firstclass.py" />
+    <entry file="file://$PROJECT_DIR$/src/test.py" />
     <entry file="file://$PROJECT_DIR$/src/Handin 1/logisticregression.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
@@ -572,21 +621,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_firstclass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_firstclass.py" />
+    <entry file="file://$PROJECT_DIR$/src/test.py" />
     <entry file="file://$PROJECT_DIR$/src/Exercise1.ipynb" />
     <entry file="file://$PROJECT_DIR$/src/Week+1+Programming+Exercise.ipynb" />
     <entry file="file://$PROJECT_DIR$/src/Handin 1/Handin_1_Machine_Learning_2016.ipynb">
@@ -596,21 +632,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_firstclass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_firstclass.py" />
+    <entry file="file://$PROJECT_DIR$/src/test.py" />
     <entry file="file://$PROJECT_DIR$/src/Exercise1.ipynb" />
     <entry file="file://$PROJECT_DIR$/src/Week+1+Programming+Exercise.ipynb" />
     <entry file="file://$PROJECT_DIR$/src/Handin 1/Handin_1_Machine_Learning_2016.ipynb">
@@ -620,137 +643,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_firstclass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_firstclass.py" />
+    <entry file="file://$PROJECT_DIR$/src/test.py" />
     <entry file="file://$PROJECT_DIR$/src/Exercise1.ipynb" />
     <entry file="file://$PROJECT_DIR$/src/Week+1+Programming+Exercise.ipynb" />
-    <entry file="file://$PROJECT_DIR$/tests/test_firstclass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_firstclass.py" />
+    <entry file="file://$PROJECT_DIR$/src/test.py" />
     <entry file="file://$PROJECT_DIR$/src/Exercise1.ipynb" />
-    <entry file="file://$PROJECT_DIR$/tests/test_firstclass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_firstclass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_firstclass.py" />
+    <entry file="file://$PROJECT_DIR$/src/test.py" />
+    <entry file="file://$PROJECT_DIR$/tests/test_firstclass.py" />
+    <entry file="file://$PROJECT_DIR$/src/test.py" />
     <entry file="file://$PROJECT_DIR$/src/Exercise1.ipynb" />
-    <entry file="file://$PROJECT_DIR$/tests/test_firstclass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_firstclass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_firstclass.py" />
+    <entry file="file://$PROJECT_DIR$/src/test.py" />
+    <entry file="file://$PROJECT_DIR$/tests/test_firstclass.py" />
+    <entry file="file://$PROJECT_DIR$/src/test.py" />
     <entry file="file://$PROJECT_DIR$/tests/__init__.py" />
     <entry file="file://$PROJECT_DIR$/src/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/src/Week+1+Programming+Exercise.ipynb" />
+    <entry file="file://$PROJECT_DIR$/src/Exercise1.ipynb" />
+    <entry file="file://$PROJECT_DIR$/src/Exercise Week1/Week+1+Programming+Exercise.ipynb" />
+    <entry file="file://$PROJECT_DIR$/src/test.py" />
+    <entry file="file://$PROJECT_DIR$/tests/test_firstclass.py" />
     <entry file="file://$PROJECT_DIR$/src/Handin 1/Handin_1_Machine_Learning_2016.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
-          <selected id="1" />
+          <selected id="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Week+1+Programming+Exercise.ipynb" />
-    <entry file="file://$PROJECT_DIR$/src/Exercise1.ipynb" />
-    <entry file="file://$PROJECT_DIR$/src/Exercise Week1/Week+1+Programming+Exercise.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.py">
+    <entry file="file://C:/Anaconda3/Lib/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_firstclass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="419">
+          <caret line="599" column="0" selection-start-line="599" selection-start-column="0" selection-end-line="599" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Handin 1/test_logisticregression.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="467">
+          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -759,8 +693,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Handin 1/logisticregression.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+        <state relative-caret-position="255">
+          <caret line="91" column="39" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
