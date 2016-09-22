@@ -7,9 +7,11 @@ from nose.tools import nottest
 
 from logisticregression import log_cost
 from logisticregression import batch_grad_descent
-from logisticregression import execute_LGMobel
+from logisticregression import get_class_lg_model
 from logisticregression import logistic
 from logisticregression import mini_batch_grad_descent
+from logisticregression import all_versus_one_lg_mini_batch
+
 
 class LogisticTestCase(unittest.TestCase):
     def test_large_value(self):
@@ -58,21 +60,19 @@ class Log_CostTestCase(unittest.TestCase):
         #-(1* (1 - (1/(1 + np.exp(-7)))) + 2* (0 - (1/(1 + np.exp(-14)))) + 3* (1 - (1/(1 + np.exp(-21)))))
 
 class Batch_grad_descentTestCase(unittest.TestCase):
-    @nottest
     def test_4_points_on_line(self):
         X = np.array([[1, 1, 1], [1, 2, 2], [1, 3, 3], [1, 4, 4], [1, 2, 0], [1, 0, 2]])
         y = np.array([[1], [1], [0], [0], [1], [0]])
-        w = batch_grad_descent(X,y)
+        w = batch_grad_descent(X,y, max_iterations=2)
         np.testing.assert_equal(actual=len(w.shape), desired=2)
         print(w)
         np.testing.assert_equal(actual=w.shape[0], desired=X.shape[1])
         np.testing.assert_equal(actual=w.shape[1], desired=1)
 
-    @nottest
     def test_4_points_on_line_with_onedimension_y(self):
         X = np.array([[1, 1, 1], [1, 2, 2], [1, 3, 3], [1, 4, 4], [1, 2, 0], [1, 0, 2]])
         y = np.array([1, 1, 0, 0, 1, 0])
-        w = batch_grad_descent(X, y)
+        w = batch_grad_descent(X, y, max_iterations=2)
         np.testing.assert_equal(actual=len(w.shape), desired=2)
         print(w)
         np.testing.assert_equal(actual=w.shape[0], desired=X.shape[1])
@@ -102,12 +102,23 @@ class execute_LGMobelTestCase(unittest.TestCase):
         w = np.array([1, 2, 3])
         x = np.array([1, 1, 1])
         limit = 0.5
-        np.testing.assert_equal(execute_LGMobel(w, x, limit), desired=1)
+        np.testing.assert_equal(get_class_lg_model(w, x, limit), desired=1)
         #1/(1 + np.exp(-6))
 
     def test_model_execution_negative(self):
         w = np.array([1, 2, 3])
         x = np.array([1, -1, -1])
         limit = 0.5
-        np.testing.assert_equal(execute_LGMobel(w, x, limit), desired=0)
+        np.testing.assert_equal(get_class_lg_model(w, x, limit), desired=0)
         #1/(1 + np.exp(4))
+
+class All_versus_one_classification_TestCase(unittest.TestCase):
+    def test_some_input(self):
+        X = np.array([[1, 1, 1], [1, 2, 2], [1, 3, 3], [1, 4, 4], [1, 2, 0], [1, 0, 2]])
+        y = np.array([[1], [2], [0], [2], [1], [0]])
+        models = all_versus_one_lg_mini_batch(X=X,y=y, batchsize=1, epochs=1)
+        np.testing.assert_equal(actual=len(models), desired=3)
+        np.testing.assert_equal(actual=len(models[0].shape), desired=2)
+        np.testing.assert_equal(actual=models[0].shape[0], desired=X.shape[1])
+        np.testing.assert_equal(actual=models[0].shape[1], desired=1)
+        print(models)
