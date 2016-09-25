@@ -4,6 +4,7 @@ from _pytest import assertion
 from mpmath import limit
 from nose.tools.trivial import ok_
 from nose.tools import nottest
+import math
 
 from logisticregression import log_cost
 from logisticregression import batch_grad_descent
@@ -18,6 +19,13 @@ class LogisticTestCase(unittest.TestCase):
         value = logistic(np.array([200]))
         ok_(value != 1, "Logistic is one")
 
+    def test_very_large_value(self):
+        value = logistic(np.array([50000]))
+        ok_(value != 1, "Logistic is one")
+
+    def test_very_small_value(self):
+        value = logistic(np.array([-500000000]))
+        ok_(not math.isnan(value), "Logistic is zero")
 
 #Remember nosetests should be executed with --nocapture to see output
 class Log_CostTestCase(unittest.TestCase):
@@ -63,7 +71,7 @@ class Batch_grad_descentTestCase(unittest.TestCase):
     def test_4_points_on_line(self):
         X = np.array([[1, 1, 1], [1, 2, 2], [1, 3, 3], [1, 4, 4], [1, 2, 0], [1, 0, 2]])
         y = np.array([[1], [1], [0], [0], [1], [0]])
-        w = batch_grad_descent(X,y, max_iterations=2)
+        w, cost_series, total_time  = batch_grad_descent(X,y, epochs=2)
         np.testing.assert_equal(actual=len(w.shape), desired=2)
         print(w)
         np.testing.assert_equal(actual=w.shape[0], desired=X.shape[1])
@@ -72,7 +80,7 @@ class Batch_grad_descentTestCase(unittest.TestCase):
     def test_4_points_on_line_with_onedimension_y(self):
         X = np.array([[1, 1, 1], [1, 2, 2], [1, 3, 3], [1, 4, 4], [1, 2, 0], [1, 0, 2]])
         y = np.array([1, 1, 0, 0, 1, 0])
-        w = batch_grad_descent(X, y, max_iterations=2)
+        w, cost_series, total_time = batch_grad_descent(X, y, epochs=2)
         np.testing.assert_equal(actual=len(w.shape), desired=2)
         print(w)
         np.testing.assert_equal(actual=w.shape[0], desired=X.shape[1])

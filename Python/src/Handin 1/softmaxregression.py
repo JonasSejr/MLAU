@@ -62,8 +62,6 @@ def batch_grad_descent(X, Y, W=None, max_iterations=100, reg=0.0):
     Returns:
         The learned weights
     """
-    test_img, test_lab = load_data('auTrain.npz')
-
     if W is None:
         W = np.zeros((X.shape[1], Y.shape[1]))
     print("Finding the best vector")
@@ -75,7 +73,6 @@ def batch_grad_descent(X, Y, W=None, max_iterations=100, reg=0.0):
         cost, grad = soft_cost(X, Y, W)
         W -= speed * grad
         keeponimproving = iteration < max_iterations
-        print(calculate_multiclass_error(test_img, test_lab, W))
     return W
 
 
