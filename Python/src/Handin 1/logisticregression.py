@@ -2,26 +2,6 @@ import numpy as np
 import sys
 import matplotlib.pyplot as plt
 
-
-# from astropy._erfa.core import cal2jd
-# from gevent.ares import result
-# from mpmath.tests.test_linalg import improve_solution
-class TestResult(object):
-    function = ""
-    theta = []
-    cost_series = []
-    error = 0
-
-class MultiClassTestResult(object):
-    function = ""
-    models = []
-    error = 0
-
-multiclass_results = MultiClassTestResult()
-batch_results = TestResult()
-mini_batch_results = TestResult()
-
-
 def load_data(filename):
     """Loads the training data from file"""
     # Change this to the AU digits data set when it has been released!
@@ -42,15 +22,6 @@ def load_data_27_only(filename):
     lab27[lab27 == 2] = 0
     lab27[lab27 == 7] = 1
     return img27, lab27
-
-
-def load_test_data_27_only(filename):
-    return load_data_27_only(filename)
-
-
-def load_train_data_27_only(filename):
-    return load_data_27_only(filename)
-
 
 def logistic(z):
     """ 
@@ -98,7 +69,7 @@ def log_cost(X, y, w, reg=0):
     return cost, grad
 
 
-def batch_grad_descent(X, y, w=None, max_iterations=float('inf'), reg=0):
+def batch_grad_descent(X, y, w=None, max_iterations=float('inf'), reg=0, speed=):
     """ 
     Run Batch Gradient Descent on data X,y to minimize the NLL for logistic regression on data X,y
 
@@ -119,7 +90,7 @@ def batch_grad_descent(X, y, w=None, max_iterations=float('inf'), reg=0):
     if w is None:
         w = np.zeros(X.shape[1]).reshape(X.shape[1], 1)
     minimum_improvement = 0.0000001
-    speed = 0.0001
+    speed = 0.1 #Recommended in the book
     previous_cost = 1000000  # something very high
     keeponimproving = True
     print("Finding the best vector")
@@ -190,7 +161,7 @@ def all_versus_one_lg_mini_batch(X, y, w=None, reg=0, batchsize=16, epochs=10):
         index_not_i = (y_bin != i)
         y_bin[index_i] = 1
         y_bin[index_not_i] = 0
-        w = mini_batch_grad_descent(X, y_bin, w=None, reg=0, batchsize=batchsize, epochs=epochs)
+        w = mini_batch_grad_descent(X, y_bin, w=w, reg=0, batchsize=batchsize, epochs=epochs)
         models.append(w)
         error = calculate_error(X, y_bin, w)
         print("Error" + str(error))
@@ -222,60 +193,50 @@ def calculate_labels_with_model(w, X):
 
 def calculate_error(X, y, w):
     calc_labels = calculate_labels_with_model(w, X)
-    correct_predictions = (calc_labels == y)
-    error = 1 - np.mean(correct_predictions)
-    return error
+    misclassifications = (calc_labels != y)
+    error = np.mean(misclassifications)
+    return error, y[misclassifications]
 
 def calculate_multiclass_labels_with_model(models, X):
     return np.apply_along_axis(lambda x: get_class_multiclass_lg_model(x=x, models=models), 1, X)
 
 def calculate_multiclass_error(X, y, models):
     calc_labels = calculate_multiclass_labels_with_model(models=models, X=X)
-    correct_predictions = (calc_labels == y)
-    error = 1 - np.mean(correct_predictions)
-    return error
+    misclassifications = (calc_labels != y)
+    error = np.mean(misclassifications)
+    return error, y[misclassifications]
 
-def test_batch_gradient_decent():
-    global batch_results
-    batch_results.function = "batch with au data, 1 epoch, k = 10"
-    print(batch_results.function)
-    train_img27, train_lab27 = load_train_data_27_only('auTrain.npz')
-    test_img27, test_lab27 = load_test_data_27_only('auTest.npz')
-    w = batch_grad_descent(train_img27, train_lab27)
-
-    batch_results.error = calculate_error(test_img27, test_lab27, w)
-    batch_results.theta = w
-
-def test_mini_batch_gradient_decent():
-    global mini_batch_results
-    mini_batch_results.function = "mini_batch with au data, 1 epoch, k = 10"
-    print(mini_batch_results.function)
-
-    train_img27, train_lab27 = load_train_data_27_only('auTrain.npz')
-    test_img27, test_lab27 = load_test_data_27_only('auTest.npz')
-    w = mini_batch_grad_descent(train_img27, train_lab27, epochs=1)
-
-    mini_batch_results.error = calculate_error(test_img27, test_lab27, w)
-    mini_batch_results.theta = w
-
-
-
-def test_get_class_multiclass_lg_model():
-    global multiclass_results
+def test_7_v_2_batch(reg=0, batchsize=16, epochs=10):
     train_img, train_lab = load_data('auTrain.npz')
-    test_img, test_lab = load_data('auTrain.npz')
+    test_img, test_lab = load_data('auTest.npz')
+    w = batch_grad_descent(X=train_img, y=train_lab, reg=reg, batchsize=batchsize, epochs=epochs)
+    error, misclassified_images = calculate_error(X=test_img, y=test_lab, w=w)
+    return w, error, misclassified_images
 
-    multiclass_results.function = "all_versus_one_lg_mini_batch with au data, 1 epoch, batchsize = 10"
-    print(multiclass_results.function)
-    models = all_versus_one_lg_mini_batch(X=train_img, y=train_lab, epochs=1, batchsize=10)
-
-    multiclass_results.error = calculate_multiclass_error(X=test_img, y=test_lab, models=models)
-    multiclass_results.models = models
-    print(multiclass_results.error)
-    print(models)
-
+def test_all_v_one(reg=0, batchsize=16, epochs=10):
+    train_img, train_lab = load_data('auTrain.npz')
+    test_img, test_lab = load_data('auTest.npz')
+    models = all_versus_one_lg_mini_batch(X=train_img, y=train_lab, reg=reg, batchsize=batchsize, epochs=epochs)
+    error, misclassified_images = calculate_multiclass_error(X=test_img, y=test_lab, models=models)
+    return models, error, misclassified_images
 
 def main():
+    # TODO[Jonas]: Visualization (in the notebook) of some of the misclassified images
+    # TODO[Jonas]: Show parameter vectors, both 2-7 and all-one
+
+    #Analysing the learning algorithm
+    # TODO[Jonas]: Comparison between batch and mini_batch, with the best found parameters. Time versus precision.
+    # TODO[Jonas]: cost as a function of number of steps
+
+    #Analysing the model with fixed paramters for gradient descent
+
+    # TODO[Jonas]: Generate a very precise 2-7 theta and save it (optimized for au dataset)
+    # np.savez("params.npz", theta=best_theta)
+
+    # TODO[Jonas]: Bonus: regularization
+    # TODO[Jonas]: Bonus: Test algs mnist
+
+
     #test_get_class_multiclass_lg_model()
     #test_batch_gradient_decent()
     test_mini_batch_gradient_decent()

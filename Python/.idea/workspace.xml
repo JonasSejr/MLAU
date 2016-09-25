@@ -21,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="logisticregression.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="logisticregression.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Handin 1/logisticregression.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6380">
-              <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+            <state relative-caret-position="208">
+              <caret line="71" column="79" selection-start-line="71" selection-start-column="79" selection-end-line="71" selection-end-column="79" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -33,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Handin_1_Machine_Learning_2016.ipynb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Handin_1_Machine_Learning_2016.ipynb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Handin 1/Handin_1_Machine_Learning_2016.ipynb">
           <provider selected="true" editor-type-id="ipnb-editor">
             <state>
-              <selected id="4" />
+              <selected id="6" />
             </state>
           </provider>
         </entry>
@@ -45,8 +45,32 @@
       <file leaf-file-name="test_logisticregression.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Handin 1/test_logisticregression.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="122" column="48" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="48" />
+            <state relative-caret-position="440">
+              <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="softmaxregression.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Handin 1/softmaxregression.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118">
+              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_softmaxregression.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Handin 1/test_softmaxregression.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -59,9 +83,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
         <option value="Python Unit Test" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -77,6 +101,9 @@
         <option value="$PROJECT_DIR$/src/test.py" />
         <option value="$PROJECT_DIR$/tests/test_logisticregression.py" />
         <option value="$PROJECT_DIR$/tests/Handin 1/test_logisticregression.py" />
+        <option value="$PROJECT_DIR$/src/Handin 1/util.py" />
+        <option value="$PROJECT_DIR$/tests/Handin 1/test_softmaxregression.py" />
+        <option value="$PROJECT_DIR$/src/Handin 1/softmaxregression.py" />
         <option value="$PROJECT_DIR$/src/Handin 1/logisticregression.py" />
       </list>
     </option>
@@ -112,7 +139,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -162,6 +188,10 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Handin 1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -176,14 +206,11 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Handin 1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -193,35 +220,15 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\gitprojects\MLAU\Python\src\Exercise Week 1" />
       <recent name="C:\gitprojects\MLAU\Python\tests\Handin 1" />
       <recent name="C:\gitprojects\MLAU\Python\tests" />
       <recent name="C:\gitprojects\MLAU\Python\src\Handin 1" />
       <recent name="C:\gitprojects\MLAU\Python\src\Exercise Week1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.logisticregression">
-    <configuration default="false" name="Nosetests in Handin 1" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="C:\Anaconda3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/Handin 1" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Python" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="$PROJECT_DIR$/tests/Handin 1" />
-      <option name="TEST_TYPE" value="TEST_FOLDER" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="--nocapture" />
-      <option name="USE_PARAM" value="true" />
-      <method />
-    </configuration>
-    <configuration default="false" name="logisticregression" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.softmaxregression">
+    <configuration default="false" name="softmaxregression" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -233,12 +240,12 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Handin 1/logisticregression.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Handin 1/softmaxregression.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Nosetests in Handin 1 (3)" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Nosetests in Handin 1 (2)" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -259,7 +266,7 @@
       <option name="USE_PARAM" value="true" />
       <method />
     </configuration>
-    <configuration default="false" name="Nosetest Mini_batch_grad_descentTestCase.test_4_points_on_line" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Nosetest SoftmaxTestCase.test_softmax" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -269,10 +276,10 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/Handin 1/test_logisticregression.py" />
-      <option name="CLASS_NAME" value="Mini_batch_grad_descentTestCase" />
-      <option name="METHOD_NAME" value="test_4_points_on_line" />
-      <option name="FOLDER_NAME" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/Handin 1/test_softmaxregression.py" />
+      <option name="CLASS_NAME" value="SoftmaxTestCase" />
+      <option name="METHOD_NAME" value="test_softmax" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$/tests/Handin 1" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
@@ -280,7 +287,28 @@
       <option name="USE_PARAM" value="true" />
       <method />
     </configuration>
-    <configuration default="false" name="Nosetests in Handin 1 (2)" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Nosetests in Handin 1 (1)" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="C:\Anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/Handin 1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$/tests/Handin 1" />
+      <option name="TEST_TYPE" value="TEST_FOLDER" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="--nocapture" />
+      <option name="USE_PARAM" value="true" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Nosetests in Handin 1 (3)" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -436,19 +464,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Nosetests in Handin 1" />
-      <item index="1" class="java.lang.String" itemvalue="Python.logisticregression" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetests in Handin 1 (3)" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetest Mini_batch_grad_descentTestCase.test_4_points_on_line" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetests in Handin 1 (2)" />
+      <item index="0" class="java.lang.String" itemvalue="Python.softmaxregression" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetests in Handin 1 (2)" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetest SoftmaxTestCase.test_softmax" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetests in Handin 1 (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetests in Handin 1 (3)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.logisticregression" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetests in Handin 1 (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetest Mini_batch_grad_descentTestCase.test_4_points_on_line" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetests in Handin 1 (3)" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetests in Handin 1" />
+        <item index="0" class="java.lang.String" itemvalue="Python.softmaxregression" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetests in Handin 1 (3)" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetest SoftmaxTestCase.test_softmax" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetests in Handin 1 (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetests in Handin 1 (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -469,35 +497,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Nosetest_Mini_batch_grad_descentTestCase_test_4_points_on_line - 2016.09.17 at 15h 01m 46s.xml">
-      <configuration name="Nosetest Mini_batch_grad_descentTestCase.test_4_points_on_line" configurationId="tests" />
+    <history-entry file="Nosetest_SoftmaxTestCase_test_softmax - 2016.09.25 at 09h 43m 05s.xml">
+      <configuration name="Nosetest SoftmaxTestCase.test_softmax" configurationId="tests" />
     </history-entry>
-    <history-entry file="Nosetest_Mini_batch_grad_descentTestCase_test_4_points_on_line - 2016.09.17 at 15h 02m 26s.xml">
-      <configuration name="Nosetest Mini_batch_grad_descentTestCase.test_4_points_on_line" configurationId="tests" />
+    <history-entry file="Nosetest_SoftmaxTestCase_test_softmax - 2016.09.25 at 10h 00m 20s.xml">
+      <configuration name="Nosetest SoftmaxTestCase.test_softmax" configurationId="tests" />
     </history-entry>
-    <history-entry file="Nosetest_Mini_batch_grad_descentTestCase_test_4_points_on_line - 2016.09.17 at 15h 05m 38s.xml">
-      <configuration name="Nosetest Mini_batch_grad_descentTestCase.test_4_points_on_line" configurationId="tests" />
+    <history-entry file="Nosetest_SoftmaxTestCase_test_softmax - 2016.09.25 at 10h 01m 03s.xml">
+      <configuration name="Nosetest SoftmaxTestCase.test_softmax" configurationId="tests" />
     </history-entry>
-    <history-entry file="Nosetest_Mini_batch_grad_descentTestCase_test_4_points_on_line - 2016.09.17 at 15h 06m 46s.xml">
-      <configuration name="Nosetest Mini_batch_grad_descentTestCase.test_4_points_on_line" configurationId="tests" />
+    <history-entry file="Nosetest_SoftmaxTestCase_test_softmax - 2016.09.25 at 10h 01m 17s.xml">
+      <configuration name="Nosetest SoftmaxTestCase.test_softmax" configurationId="tests" />
     </history-entry>
-    <history-entry file="Nosetests_in_Handin_1_(2) - 2016.09.18 at 22h 20m 53s.xml">
+    <history-entry file="Nosetest_SoftmaxTestCase_test_softmax - 2016.09.25 at 10h 01m 48s.xml">
+      <configuration name="Nosetest SoftmaxTestCase.test_softmax" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_Handin_1 - 2016.09.23 at 23h 05m 12s.xml">
+      <configuration name="Nosetests in Handin 1" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_Handin_1 - 2016.09.23 at 23h 05m 40s.xml">
+      <configuration name="Nosetests in Handin 1" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_Handin_1_(1) - 2016.09.25 at 09h 58m 44s.xml">
+      <configuration name="Nosetests in Handin 1 (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_Handin_1_(2) - 2016.09.23 at 23h 57m 21s.xml">
       <configuration name="Nosetests in Handin 1 (2)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Nosetests_in_Handin_1_(2) - 2016.09.18 at 22h 28m 35s.xml">
-      <configuration name="Nosetests in Handin 1 (2)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_in_Handin_1_(2) - 2016.09.18 at 22h 29m 12s.xml">
-      <configuration name="Nosetests in Handin 1 (2)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_in_Handin_1_(2) - 2016.09.18 at 22h 31m 21s.xml">
-      <configuration name="Nosetests in Handin 1 (2)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_in_Handin_1_(2) - 2016.09.18 at 22h 32m 31s.xml">
-      <configuration name="Nosetests in Handin 1 (2)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Nosetests_in_Handin_1_(2) - 2016.09.18 at 22h 33m 09s.xml">
-      <configuration name="Nosetests in Handin 1 (2)" configurationId="tests" />
+    <history-entry file="Nosetests_in_Handin_1_(3) - 2016.09.25 at 10h 01m 55s.xml">
+      <configuration name="Nosetests in Handin 1 (3)" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView" selected-index="2">
@@ -518,7 +546,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47976878" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29956427" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28431374" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28431374" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -547,9 +575,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/src/Handin 1/logisticregression.py</url>
-          <line>211</line>
-          <option name="timeStamp" value="52" />
+          <url>file://$PROJECT_DIR$/src/Handin 1/softmaxregression.py</url>
+          <line>110</line>
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -559,7 +587,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="56" />
+      <option name="time" value="63" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
@@ -569,26 +597,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Handin 1/logisticregression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Handin 1/test_logisticregression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2420">
-          <caret line="122" column="48" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Handin 1/test_logisticregression.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -725,10 +733,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Handin 1/Handin_1_Machine_Learning_2016.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Handin 1/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Handin 1/test_softmaxregression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Handin 1/softmaxregression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Handin 1/test_logisticregression.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="122" column="48" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="48" />
+        <state relative-caret-position="440">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -737,18 +780,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Handin 1/logisticregression.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6380">
-          <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+        <state relative-caret-position="208">
+          <caret line="71" column="79" selection-start-line="71" selection-start-column="79" selection-end-line="71" selection-end-column="79" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Handin 1/Handin_1_Machine_Learning_2016.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="4" />
         </state>
       </provider>
     </entry>
