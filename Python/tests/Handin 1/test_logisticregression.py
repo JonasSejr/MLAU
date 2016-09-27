@@ -1,10 +1,8 @@
 import unittest
 import numpy as np
-from _pytest import assertion
-from mpmath import limit
 from nose.tools.trivial import ok_
-from nose.tools import nottest
 import math
+import time
 
 from logisticregression import log_cost
 from logisticregression import batch_grad_descent
@@ -90,7 +88,7 @@ class Mini_batch_grad_descentTestCase(unittest.TestCase):
     def test_4_points_on_line(self):
         X = np.array([[1, 1, 1], [1, 2, 2], [1, 3, 3], [1, 4, 4], [1, 2, 0], [1, 0, 2]])
         y = np.array([[1], [1], [0], [0], [1], [0]])
-        w = mini_batch_grad_descent(X=X,y=y, batchsize=1, epochs=1)
+        w, cost_series, total_time = mini_batch_grad_descent(X=X,y=y, batchsize=1, epochs=1)
         np.testing.assert_equal(actual=len(w.shape), desired=2)
         print(w)
         np.testing.assert_equal(actual=w.shape[0], desired=X.shape[1])
@@ -99,7 +97,7 @@ class Mini_batch_grad_descentTestCase(unittest.TestCase):
     def test_4_points_on_line_with_onedimension_y(self):
         X = np.array([[1, 1, 1], [1, 2, 2], [1, 3, 3], [1, 4, 4], [1, 2, 0], [1, 0, 2]])
         y = np.array([1, 1, 0, 0, 1, 0])
-        w = mini_batch_grad_descent(X=X,y=y, batchsize=1, epochs=1)
+        w, cost_series, total_time = mini_batch_grad_descent(X=X,y=y, batchsize=1, epochs=1)
         np.testing.assert_equal(actual=len(w.shape), desired=2)
         print(w)
         np.testing.assert_equal(actual=w.shape[0], desired=X.shape[1])

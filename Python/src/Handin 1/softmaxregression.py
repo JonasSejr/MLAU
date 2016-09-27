@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from blaze.compute.tests.test_numpy_compute import test_label
+import time
 
 
 def softmax(X):
@@ -21,11 +21,8 @@ def softmax(X):
     sums = np.sum(exp_1, axis=1, keepdims=True)
     exp_2 = X - maxs - np.log(sums)
     result = np.exp(exp_2)
-
-    #Simple implementation
-    #Exps = np.exp(X)
-    #denominator = np.sum(Exps, axis=1)
-    #result = Exps / (denominator.reshape(len(Exps), 1))
+    very_close_to_0 = 0.00000000000000009
+    result[result < very_close_to_0] = very_close_to_0  # WTF
     return result
 
 
@@ -45,13 +42,16 @@ def soft_cost(X, Y, W, reg=0):
     """
     linearPart = np.dot(X, W)
     softmaxPart = softmax(linearPart)
-    NNLs = np.multiply(softmaxPart, Y)
-    totalcost = np.sum(NNLs)
+    logPart = np.log(softmaxPart)
+    NLLs = np.multiply(Y,logPart)
+    #We need the rowwise dotproduct, but we get elementwise product.
+    #In the next line we sum all the elements and therefore we end up with the same result
+    totalcost = -(np.sum(NLLs))/X.shape[0]
     gradient = -np.dot(X.T, (Y - softmax(np.dot(X, W))))
     return totalcost, gradient
 
 
-def batch_grad_descent(X, Y, W=None, max_iterations=100, reg=0.0):
+def batch_grad_descent(X, Y, W=None, max_iterations=float('inf'), reg=0.0, speed=0.1, seconds=float('inf')):
     """
     Run batch gradient descent to learn softmax regression weights that minimize the in-sample error
     Args:
@@ -62,21 +62,31 @@ def batch_grad_descent(X, Y, W=None, max_iterations=100, reg=0.0):
     Returns:
         The learned weights
     """
+    cost_series = []
     if W is None:
         W = np.zeros((X.shape[1], Y.shape[1]))
     print("Finding the best vector")
-    speed = 0.1  # Recommended in the book
     iteration = 0
     keeponimproving = True
+    start_time = time.time()
     while keeponimproving:
         iteration += 1
         cost, grad = soft_cost(X, Y, W)
+        cost_series.append(cost)
         W -= speed * grad
-        keeponimproving = iteration < max_iterations
-    return W
+        time_taken = time.time() - start_time
+        keeponimproving = iteration < max_iterations and time_taken < seconds
+        print(cost)
+    total_time = time.time() - start_time
+    return W, cost_series, total_time
+
+def shuffle_in_unison_inplace(a, b):
+    assert len(a) == len(b)
+    p = np.random.permutation(len(a))
+    return a[p], b[p]
 
 
-def mini_batch_grad_descent(X, y, reg, W=None, batchsize=16, epochs=10):
+def mini_batch_grad_descent(X, Y, W=None, batchsize=16, epochs=100, speed=0.1, seconds=float('inf')):
     """
     Run Mini-Batch Gradient Descent on data X,y to minimize the NLL for logistic regression on data X,y
     Args:
@@ -89,10 +99,25 @@ def mini_batch_grad_descent(X, y, reg, W=None, batchsize=16, epochs=10):
     Returns:
         The learned weights
     """
+    cost_series = []
     if W is None:
-        W = np.zeros((X.shape[1], y.shape[1]))
-    return W
-
+        W = np.zeros((X.shape[1], Y.shape[1]))
+    start_time = time.time()
+    for x in range(epochs):
+        shuffle_in_unison_inplace(X, Y)
+        i = 0
+        while i + batchsize < X.shape[0]:
+            cost, grad = soft_cost(X[i:i+batchsize, :], Y[i:i+batchsize, :], W)
+            cost_series.append(cost)
+            W -= speed * grad
+            i = i + batchsize
+            if (time.time() - start_time > seconds):
+                break
+        if (time.time() - start_time > seconds):
+            break
+        total_time = time.time() - start_time
+        print(cost)
+    return W, cost_series, total_time
 
 
 def load_data(filename):
@@ -104,6 +129,16 @@ def load_data(filename):
     print('Shape of input data: %s %s' % (images.shape, labels.shape))
     return images, labels
 
+def load_data_mnist(filename):
+    """Loads the training data from file"""
+    # Change this to the AU digits data set when it has been released!
+    train_file = np.load(filename)
+    images = train_file['images']  # image
+    labels = np.squeeze(train_file['labels'])  # TODO remove squeeze
+    print('Shape of input data: %s %s' % (images.shape, labels.shape))
+    return images, labels
+
+
 def convertLabels(labels):
     one_hot = np.zeros((labels.size, np.max(labels) + 1))
     one_hot[np.arange(labels.size), labels] = 1
@@ -114,16 +149,63 @@ def calculate_labels_with_softmax_model(W, X):
 
 def calculate_multiclass_error(X, y, W):
     calc_labels = calculate_labels_with_softmax_model(W=W, X=X)
-    correct_predictions = (calc_labels == y)
-    error = 1 - np.mean(correct_predictions)
-    return error
+    misclassifications = np.not_equal(calc_labels.reshape((calc_labels.size, 1)), y.reshape((y.size, 1)))
+    error = np.mean(misclassifications)
+    return error, X[misclassifications.flatten()]
 
-def test_softmax():
+def show_images(images):
+    x = images.reshape(-1, 28, 28)
+    x = x.transpose(1, 0, 2)
+    plt.imshow(x.reshape(28, -1), cmap='bone')
+    plt.yticks([])
+    plt.xticks([])
+    plt.figure()
+
+def analyseSimpleBatchGradientDescent():
     train_img, train_lab = load_data('auTrain.npz')
     test_img, test_lab = load_data('auTrain.npz')
     softmax_train_lab = convertLabels(train_lab)
-    W = batch_grad_descent(train_img, softmax_train_lab, max_iterations=100)
-    print(calculate_multiclass_error(test_img, test_lab, W))
+    W, cost_series, total_time = batch_grad_descent(train_img, softmax_train_lab, max_iterations=1000, speed= 0.00002)
+    error, misclassified_images_batch = calculate_multiclass_error(test_img, test_lab, W)
+    print("Error " + str(error))
+    show_images(misclassified_images_batch[0:16, :])
+    plt.show()
+    show_images(W.T)
+    plt.show()
+    plt.plot(cost_series, 'r', linewidth=2)
+    plt.title('cost per iteration softmax batch')
+    plt.show()
+    np.savez("paramsSoftmax.npz", theta=W)
+
+def analyseSimpleBatchGradientDescentMNIST():
+    train_img, train_lab = load_data_mnist('mnistTrain.npz')
+    test_img, test_lab = load_data_mnist('mnistTrain.npz')
+    softmax_train_lab = convertLabels(train_lab)
+    W, cost_series, total_time = batch_grad_descent(train_img, softmax_train_lab, max_iterations=1000, speed= 0.00002)
+    error, misclassified_images_batch = calculate_multiclass_error(test_img, test_lab, W)
+    print("Error " + str(error))
+
+def analyseMiniBatchVersusBatchGradienDescent():
+    train_img, train_lab = load_data('auTrain.npz')
+    test_img, test_lab = load_data('auTrain.npz')
+    softmax_train_lab = convertLabels(train_lab)
+    W, cost_series, total_time = batch_grad_descent(train_img, softmax_train_lab, seconds=60,speed= 0.00002)
+    error, misclassified_images_batch = calculate_multiclass_error(test_img, test_lab, W)
+    W_mini, cost_series_mini, total_time_mini = mini_batch_grad_descent(train_img, softmax_train_lab, epochs=100000, seconds=60, speed=0.00002)
+    error_mini, misclassified_images_batch_mini = calculate_multiclass_error(test_img, test_lab, W_mini)
+    print("Batch " + str(error))
+    print("Mini Batch " + str(error_mini))
+
+    plt.plot(cost_series, 'r', linewidth=2)
+    plt.title('cost per iteration softmax batch')
+    plt.show()
+
+    plt.plot(cost_series_mini, 'r', linewidth=2)
+    plt.title('cost per iteration softmax mini batch')
+    plt.show()
 
 if __name__ == "__main__":
-    test_softmax()
+    plt.interactive(False)
+    #analyseSimpleBatchGradientDescent()
+    #analyseSimpleBatchGradientDescentMNIST()
+    analyseMiniBatchVersusBatchGradienDescent()

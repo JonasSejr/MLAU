@@ -27,7 +27,7 @@ class SoftCostTestCase(unittest.TestCase):
         W = np.array([[1, 2, 3, 4],
                       [5, 6, 7, 8]])
         cost, grad = soft_cost(X, Y, W, reg=0)
-        np.testing.assert_almost_equal(cost, 0.00013479850454897337, 7)
+        np.testing.assert_almost_equal(cost, 34.051992036533882, 7)
         np.testing.assert_almost_equal(grad.shape, W.shape, 7)
 
 class BatchGradDescentTestCase(unittest.TestCase):
