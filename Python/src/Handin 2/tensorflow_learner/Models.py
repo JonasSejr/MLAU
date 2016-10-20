@@ -81,3 +81,40 @@ class DeepConvolutionalNet(Model):
         mean_cross_entropy = tf.reduce_mean(cross_entropy)
         regularized_loss = mean_cross_entropy #No regularization
         return X, y_, y, regularized_loss
+
+
+class SimpleNeuralNet(Model):
+
+    def weight_variable(self, shape):
+        initial = tf.truncated_normal(shape, stddev=0.1)
+        return tf.Variable(initial)
+
+    def bias_variable(self, shape):
+        initial = tf.constant(0.1, shape=shape)
+        return tf.Variable(initial)
+
+    def construct(self, d):
+        reg_rate = 0
+        #Add layer one bredth as a variable
+        X = tf.placeholder(tf.float32, shape=[None, 784])
+        y_ = tf.placeholder(tf.int32, shape=[None])
+
+        W_1 = self.weight_variable([784, 784])
+        b_1 = self.bias_variable([784])
+
+        L1_out = tf.nn.relu(tf.matmul(X, W_1) + b_1)
+
+        #keep_prob = tf.placeholder(tf.float32)
+        #h_fc1_drop = tf.nn.dropout(h_fc1, keep_prob)
+
+        W_2 = self.weight_variable([784, 10])
+        b_2 = self.bias_variable([10])
+
+        y_conv = tf.nn.softmax(tf.matmul(L1_out, W_2) + b_2)
+
+        y = tf.cast(tf.argmax(y_conv, 1), tf.int32)
+
+        cross_entropy = tf.nn.sparse_softmax_cross_entropy_with_logits(y_conv, y_)
+        mean_cross_entropy = tf.reduce_mean(cross_entropy)
+        regularized_loss = mean_cross_entropy #No regularization
+        return X, y_, y, regularized_loss

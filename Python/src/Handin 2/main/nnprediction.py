@@ -21,7 +21,7 @@ if __name__ == "__main__":
     mnist_train_img, mnist_train_lab = load_data_au('data/auTrain.npz')
     mnist_test_img, mnist_test_lab = load_data_au('data/auTest.npz')
 
-    model = models.DeepConvolutionalNet()
+    model = models.SimpleNeuralNet()
 
     recognizer = tfl.ImageRecognizer(model)
 
@@ -34,3 +34,13 @@ if __name__ == "__main__":
     print("Errors on test set: {:.2%}".format(accuracy))
 
     print("Training time: {:.2} seconds".format(recognizer.trainingtime))
+
+
+    # TODO:Refactor to include dropout rate
+    # TODO:Log and save acuracy during training both insample and out of sample (after eeach epoch)
+    # TODO:Implement 3 layer neural network
+    # TODO:Implement an svm see assignment
+    # TODO:Save svm
+    # TODO:Tune model even more
+    # TODO:Create prediction function to handin
+    # TODO: Write report

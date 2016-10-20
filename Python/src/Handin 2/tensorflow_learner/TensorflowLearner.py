@@ -19,9 +19,10 @@ class ImageRecognizer:
         train_step = opt.minimize(regularized_loss)
         return learning_rate, train_step
 
-    def optimize_with_minibatch(self, batch_size, X, epochs, y_, y, learning_rate, session, tf_optimizer,
+    def optimize_with_minibatch(self, X, y_, y, learning_rate, session, tf_optimizer,
                                         train_images, train_labels):
-
+        epochs = 100
+        batch_size = 50
         correct_prediction = tf.equal(y, y_)
         accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
@@ -32,7 +33,7 @@ class ImageRecognizer:
             for i in range(0, len(train_labels), batch_size):
                 j = min(len(train_labels), i + batch_size)
                 endof_next_batch = min(len(train_labels), j + batch_size)
-                if i % (16*16) == 0 & j != len(train_labels):
+                if i % (4 * batch_size) == 0 & j != len(train_labels):
                     train_accuracy = accuracy.eval(feed_dict={
                         X: input_value[j:endof_next_batch],
                         y_: labels_value[j:endof_next_batch]})
@@ -44,8 +45,6 @@ class ImageRecognizer:
                                    learning_rate: 1e-4})
 
     def train(self, train_images, train_labels):
-        epochs = 10
-        batch_size = 16
         start_time = time.time()
 
         with tf.Graph().as_default():
@@ -55,7 +54,7 @@ class ImageRecognizer:
             learning_rate, tf_optimizer = self.create_tf_optimizer(regularized_loss)
 
             with tf.Session() as session:
-                self.optimize_with_minibatch(batch_size, X, epochs, y_, y, learning_rate, session, tf_optimizer,
+                self.optimize_with_minibatch(X, y_, y, learning_rate, session, tf_optimizer,
                                         train_images, train_labels)
                 saver.save(session, "mymodel.tf")
         self.trainingtime = time.time() - start_time
