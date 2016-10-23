@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import tensorflow_learner.TensorflowLearner as tfl
 import validation.ModelEvaluator as eval
 import tensorflow_learner.Models as models
+import scikit_learner as skl
 
 def load_data_au(filename):
     train_file = np.load(filename)
@@ -16,7 +17,7 @@ def load_data_mnist(filename):
     labels = train_file['labels']
     return images, labels
 
-if __name__ == "__main__":
+def runNNExperiment():
     plt.interactive(True)
     mnist_train_img, mnist_train_lab = load_data_au('data/auTrain.npz')
     mnist_test_img, mnist_test_lab = load_data_au('data/auTest.npz')
@@ -29,12 +30,41 @@ if __name__ == "__main__":
     predictions = recognizer.predict(mnist_test_img)
 
     evaluator = eval.ModelEvaluator()
-    accuracy = evaluator.evaluate_logistic(predictions, mnist_test_lab.astype(np.int32))
+    report = evaluator.create_report(predictions.astype(np.int32), mnist_test_lab.astype(np.int32))
+    error_rate = evaluator.get_error_rate(predictions.astype(np.int32), au_test_lab.astype(np.int32))
 
-    print("Errors on test set: {:.2%}".format(accuracy))
+    print("Error Rate: ")
+    print(error_rate)
 
-    print("Training time: {:.2} seconds".format(recognizer.trainingtime))
+    print("Detailed classification report:")
+    print(report)
 
+    print("Training time: {} seconds".format(recognizer.trainingtime))
+
+
+def runSVNExperiments():
+    plt.interactive(True)
+    au_train_img, au_train_lab = load_data_au('data/auTrain.npz')
+    au_test_img, au_test_lab = load_data_au('data/auTest.npz')
+    recognizer = skl.CrossvalidatedSVMLearner()
+
+    recognizer.train(au_train_img, au_train_lab)
+    predictions = recognizer.predict(au_test_img)
+
+    evaluator = eval.ModelEvaluator()
+    report = evaluator.create_report(predictions.astype(np.int32), au_test_lab.astype(np.int32))
+    error_rate = evaluator.get_error_rate(predictions.astype(np.int32), au_test_lab.astype(np.int32))
+
+    print("Error Rate: ")
+    print(error_rate)
+
+    print("Detailed classification report:")
+    print(report)
+
+    print("Training time: {} seconds".format(recognizer.trainingtime))
+
+if __name__ == "__main__":
+    runNNExperiment()
 
     # TODO:Refactor to include dropout rate
     # TODO:Log and save acuracy during training both insample and out of sample (after eeach epoch)
