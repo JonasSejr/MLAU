@@ -344,8 +344,6 @@ def main():
     #analyseSimpleBatchGradientDescentMNIST()
     analyseBatchVersusMiniBatch()
     #analyseOneVersusAll()
-    # TODO[Jonas]: Bonus: regularization
-    # TODO[Jonas]: Bonus: Test algs mnist
     return
 
 

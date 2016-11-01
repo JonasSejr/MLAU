@@ -6,20 +6,14 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report
 from sklearn.svm import SVC
 
+
 class CrossvalidatedSVMLearner:
 
     def train(self, train_images, train_labels):
         start_time = time.time()
-        self.clf = svm.SVC(kernel='linear', C=1, gamma='auto')#Shouod be selected automaticly
-        #scores = cross_val_score(self.clf, train_images, train_labels, cv=10)
-        #self.clf.fit(train_images, train_labels)
-        #print("Accuracy: %0.2f (+/- %0.2f)" % (score.mean(), scores.std() * 2))
-        #tuned_parameters = [{'kernel': ['rbf'], 'gamma': [1e-3, 1e-4], 'C': [1, 10, 100, 1000]}]
-
-
-        tuned_parameters = [#{'kernel': ['rbf'], 'gamma': [0.001, 0.0001], 'C': [1, 10, 100, 1000]},
+        tuned_parameters = [{'kernel': ['rbf'], 'gamma': [0.001, 0.0001], 'C': [1, 10, 100, 1000]},
                             #{'kernel': ['linear'], 'C': [1, 10, 100, 1000]}#,
-                            {'kernel': ['poly'], 'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'degree': [2, 3]}
+                            #{'kernel': ['poly'], 'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'degree': [3]}
             ]
 
         # scores = ['precision', 'recall']

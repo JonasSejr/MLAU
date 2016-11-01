@@ -21,7 +21,7 @@ class ImageRecognizer:
 
     def optimize_with_minibatch(self, X, y_, y, learning_rate, session, tf_optimizer,
                                         train_images, train_labels):
-        epochs = 100
+        epochs = 200
         batch_size = 50
         correct_prediction = tf.equal(y, y_)
         accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
@@ -49,7 +49,7 @@ class ImageRecognizer:
 
         with tf.Graph().as_default():
             d = train_images.shape[1]
-            X, y_, y, regularized_loss= self.model.construct(d)
+            X, y_, y, regularized_loss= self.model.constructTrainModel(d)
             saver = tf.train.Saver()
             learning_rate, tf_optimizer = self.create_tf_optimizer(regularized_loss)
 
@@ -64,7 +64,7 @@ class ImageRecognizer:
         filename = 'mymodel.tf'
         with tf.Graph().as_default():
             n, d = data_value.shape
-            X, Y_, Y, regularized_loss = self.model.construct(d)
+            X, Y_, Y, regularized_loss = self.model.constructPredictModel(d)
             saver = tf.train.Saver()
             with tf.Session() as session:
                 saver.restore(session, filename)

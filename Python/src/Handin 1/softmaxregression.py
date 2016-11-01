@@ -165,7 +165,7 @@ def analyseSimpleBatchGradientDescent():
     train_img, train_lab = load_data('auTrain.npz')
     test_img, test_lab = load_data('auTrain.npz')
     softmax_train_lab = convertLabels(train_lab)
-    W, cost_series, total_time = batch_grad_descent(train_img, softmax_train_lab, max_iterations=1000, speed= 0.00002)
+    W, cost_series, total_time = batch_grad_descent(train_img, softmax_train_lab, max_iterations=10, speed= 0.00002)
     error, misclassified_images_batch = calculate_multiclass_error(test_img, test_lab, W)
     print("Error " + str(error))
     show_images(misclassified_images_batch[0:16, :])
@@ -181,7 +181,7 @@ def analyseSimpleBatchGradientDescentMNIST():
     train_img, train_lab = load_data_mnist('mnistTrain.npz')
     test_img, test_lab = load_data_mnist('mnistTrain.npz')
     softmax_train_lab = convertLabels(train_lab)
-    W, cost_series, total_time = batch_grad_descent(train_img, softmax_train_lab, max_iterations=1000, speed= 0.00002)
+    W, cost_series, total_time = batch_grad_descent(train_img, softmax_train_lab, max_iterations=10, speed= 0.00002)
     error, misclassified_images_batch = calculate_multiclass_error(test_img, test_lab, W)
     print("Error " + str(error))
 
@@ -206,6 +206,6 @@ def analyseMiniBatchVersusBatchGradienDescent():
 
 if __name__ == "__main__":
     plt.interactive(False)
-    #analyseSimpleBatchGradientDescent()
+    analyseSimpleBatchGradientDescent()
     #analyseSimpleBatchGradientDescentMNIST()
-    analyseMiniBatchVersusBatchGradienDescent()
+    #analyseMiniBatchVersusBatchGradienDescent()
