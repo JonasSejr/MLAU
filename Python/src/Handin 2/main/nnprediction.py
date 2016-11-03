@@ -22,9 +22,9 @@ def load_data_mnist(filename):
 
 def randomizeImage(image):
     as_image = image.reshape(28,-1)
-    rotation = np.random.uniform(-10, 10)
-    shift_x = np.random.uniform(-3, 3)
-    shift_y = np.random.uniform(-3, 3)
+    rotation = np.random.uniform(-15, 15)
+    shift_x = np.random.uniform(-5, 5)
+    shift_y = np.random.uniform(-5, 5)
     rotated_images = scipy.ndimage.rotate(as_image, rotation, reshape=False)
     randomized_image  = shift(rotated_images, [shift_x, shift_y])
     randomized_image_flattend = randomized_image.flatten()
@@ -49,13 +49,13 @@ def runNNExperiment():
 
 
     au_test_img, au_test_lab = load_data_au('data/auTest.npz')
-    au_train_expanded_img, au_train_expanded_lab = expandTrainingSet(au_train_img, au_train_lab)
+    #au_train_expanded_img, au_train_expanded_lab = expandTrainingSet(au_train_img, au_train_lab)
 
-    model = models.DeepConvolutionalNet(hidden_layer_breadth=1000, drop_out_keep_prop=0.5, conv_channels=40)
-    #model = models.SimpleNeuralNet(hidden_layer_breadth=784, drop_out_keep_prop=0.8, reg_rate=0)
+    #model = models.DeepConvolutionalNet(hidden_layer_breadth=1000, drop_out_keep_prop=0.5, conv_channels=40)
+    model = models.SimpleNeuralNet(hidden_layer_breadth=1084, drop_out_keep_prop=1, reg_rate=0)
 
     recognizer = tfl.ImageRecognizer(model)
-    recognizer.train(au_train_expanded_img, au_train_expanded_lab)
+    recognizer.train(au_train_img, au_train_lab)
 
     evaluator = eval.ModelEvaluator()
 
