@@ -55,19 +55,48 @@ hid = ['4', '4', '5', '6', '7', '4', '4', '4']
 
 #calculateJointProbability(obs, hid)
 
+def log(number):
+    if(number == 0):
+        return -math.inf
+    else:
+        return math.log(number)
 
-def backtrack_most_likely(w, observations):
-    probability = 0
-    lastOberservation = len(observations) - 1
-    Z = ['E' for x in range(lastOberservation + 1)] #E for empty
+def logspace_backtrack_most_likely(w, observations):
+    probability = -math.inf
+    Z = ['E' for x in range(len(observations))] #E for empty
     for state in states.keys():
         stateIndex = states.get(state)
         probEndingWithThisState = w[stateIndex][-1]
         if(probability < probEndingWithThisState):
             probability = probEndingWithThisState
-        Z[lastOberservation] = state
-        maxProb = probability
-    for column in reversed(range(0, lastOberservation)):
+            Z[len(observations) - 1] = state
+    probOfHidden = probability
+    for column in reversed(range(0, len(observations) - 1)):
+        maxProb = -math.inf
+        for state in states.keys():
+            stateIndex = states.get(state)
+            nextStateIndex = states[Z[column + 1]]
+            probability = w[stateIndex][column] + \
+                          log(trans_probs[stateIndex][nextStateIndex]) + \
+                          log(emit_probs[nextStateIndex][observables[observations[column + 1]]])
+            if probability > maxProb:
+                Z[column] = state
+                maxProb = probability
+    return probOfHidden, ''.join(Z)
+
+
+
+def backtrack_most_likely(w, observations):
+    probability = 0
+    Z = ['E' for x in range(len(observations))] #E for empty
+    for state in states.keys():
+        stateIndex = states.get(state)
+        probEndingWithThisState = w[stateIndex][-1]
+        if(probability < probEndingWithThisState):
+            probability = probEndingWithThisState
+            Z[len(observations) - 1] = state
+    probOfHidden = probability
+    for column in reversed(range(0, len(observations))):
         maxProb = 0
         for state in states.keys():
             stateIndex = states.get(state)
@@ -78,7 +107,7 @@ def backtrack_most_likely(w, observations):
             if probability > maxProb:
                 Z[column] = state
                 maxProb = probability
-    return maxProb, ''.join(Z)
+    return probOfHidden, ''.join(Z)
 
 
 def create_matrix(observations):
@@ -86,7 +115,7 @@ def create_matrix(observations):
     for state in states.keys():
         stateIndex = states.get(state)
         w[stateIndex][0] = init_probs[stateIndex] * emit_probs[stateIndex][observables[observations[0]]]
-    for column in range(1, len(observations) - 1):
+    for column in range(1, len(observations)):
         observation = observations[column]
         observationIndex = observables[observation]
         for currentState in states.keys():
@@ -102,9 +131,34 @@ def create_matrix(observations):
             w[currentStateIndex][column] = maxProb
     return w
 
+def create_logspace_matrix(observations):
+    w = [[0 for x in range(len(observations))] for y in range(len(states))]
+    for state in states.keys():
+        stateIndex = states.get(state)
+        w[stateIndex][0] = log(init_probs[stateIndex]) + log(emit_probs[stateIndex][observables[observations[0]]])
+    for column in range(1, len(observations)):
+        observation = observations[column]
+        observationIndex = observables[observation]
+        for currentState in states.keys():
+            currentStateIndex = states.get(currentState)
+            maxProb = -math.inf
+            for lastState in states.keys():
+                lastStateIndex = states.get(lastState)
+                probability = w[lastStateIndex][column - 1] + \
+                              log(trans_probs[lastStateIndex][currentStateIndex]) + \
+                              log(emit_probs[currentStateIndex][observationIndex])
+                maxProb = max(maxProb, probability)
+            print(column)
+            w[currentStateIndex][column] = maxProb
+    return w
+
 def viterbi_backtrack(observations):
     w = create_matrix(observations)
     return backtrack_most_likely(w, observations)
+
+def logspace_viterbi_backtrack(observations):
+    w = create_logspace_matrix(observations)
+    return logspace_backtrack_most_likely(w, observations)
 
 #maxProb, hidden = viterbi_backtrack(obs)
 #print(maxProb)
