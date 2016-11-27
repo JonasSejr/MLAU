@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce516600-19d3-424c-ac8c-760bbf5b05c7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Python/src/Handin 3/hmm_jointprob.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/MLAU.iml" afterPath="$PROJECT_DIR$/.idea/MLAU.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/src/Handin 3/hmmlearner.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/src/Handin 3/hmm.py" afterPath="$PROJECT_DIR$/Python/src/Handin 3/hmm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/tests/Handin 3/test_hmm.py" afterPath="$PROJECT_DIR$/Python/tests/Handin 3/test_hmm.py" />
     </list>
     <ignored path="MLAU.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,8 +29,8 @@
       <file leaf-file-name="hmm.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Python/src/Handin 3/hmm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="106" column="16" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
+            <state relative-caret-position="210">
+              <caret line="140" column="8" selection-start-line="140" selection-start-column="8" selection-end-line="140" selection-end-column="51" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -41,14 +38,54 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_hmm.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="faste_file_reader.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python/src/Handin 3/faste_file_reader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="compare_anns.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python/src/Handin 3/compare_anns.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1740">
+              <caret line="116" column="19" selection-start-line="116" selection-start-column="19" selection-end-line="116" selection-end-column="19" />
+              <folding>
+                <element signature="e#729#738#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_hmm.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Python/tests/Handin 3/test_hmm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hmmlearner.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Python/src/Handin 3/hmmlearner.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="466">
+              <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="annotation3.fa" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python/src/Handin 3/data/annotation3.fa">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-29520">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,8 +93,18 @@
       <file leaf-file-name="case.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/anaconda3/envs/tensorflow/lib/python3.5/unittest/case.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="606">
-              <caret line="602" column="35" selection-start-line="602" selection-start-column="35" selection-end-line="602" selection-end-column="35" />
+            <state relative-caret-position="217">
+              <caret line="601" column="0" selection-start-line="601" selection-start-column="0" selection-end-line="601" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="suite.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda3/envs/tensorflow/lib/python3.5/unittest/suite.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -68,36 +115,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="softmaxregression.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Python/src/Handin 1/softmaxregression.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2385">
-              <caret line="161" column="16" selection-start-line="155" selection-start-column="0" selection-end-line="161" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Python/src/Handin 2/tensorflow_learner/Models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Python/src/Handin 2/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -143,8 +160,10 @@
         <option value="$PROJECT_DIR$/Python/src/Handin 2/handin/handin.py" />
         <option value="$PROJECT_DIR$/Python/src/Handin 2/main/nnprediction.py" />
         <option value="$PROJECT_DIR$/Python/src/Handin 3/hmm_jointprob.py" />
-        <option value="$PROJECT_DIR$/Python/src/Handin 3/hmm.py" />
         <option value="$PROJECT_DIR$/Python/tests/Handin 3/test_hmm.py" />
+        <option value="$PROJECT_DIR$/Python/src/Handin 3/hmm.py" />
+        <option value="$PROJECT_DIR$/Python/src/Handin 3/faste_file_reader.py" />
+        <option value="$PROJECT_DIR$/Python/src/Handin 3/hmmlearner.py" />
       </list>
     </option>
   </component>
@@ -179,6 +198,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -206,6 +226,16 @@
               <option name="myItemId" value="MLAU" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MLAU" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MLAU" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Handin 3" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -220,10 +250,17 @@
               <option name="myItemId" value="MLAU" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Handin 3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -242,90 +279,7 @@
       <recent name="$PROJECT_DIR$/Python/src/Handin 2/visualization" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittest HMMTestClass.test_viterbi_small">
-    <configuration default="false" name="Unittest HMMTestClass.test_viterbi" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python/tests/Handin 3" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="MLAU" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/tests/Handin 3/test_hmm.py" />
-      <option name="CLASS_NAME" value="HMMTestClass" />
-      <option name="METHOD_NAME" value="test_viterbi" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="hmm" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python/src/Handin 3" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="MLAU" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/src/Handin 3/hmm.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest HMMTestClass.test_viterbi (3)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python/tests/Handin 3" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="MLAU" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/tests/Handin 3/test_hmm.py" />
-      <option name="CLASS_NAME" value="HMMTestClass" />
-      <option name="METHOD_NAME" value="test_viterbi" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest HMMTestClass.test_viterbi (4)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python/tests/Handin 3" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="MLAU" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/tests/Handin 3/test_hmm.py" />
-      <option name="CLASS_NAME" value="HMMTestClass" />
-      <option name="METHOD_NAME" value="test_viterbi" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.hmmlearner">
     <configuration default="false" name="Unittest HMMTestClass.test_viterbi_small" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -346,6 +300,89 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest HMMTestClass.test_viterbi_huge (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python/tests/Handin 3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="MLAU" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/tests/Handin 3/test_hmm.py" />
+      <option name="CLASS_NAME" value="HMMTestClass" />
+      <option name="METHOD_NAME" value="test_viterbi_huge" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest HMMTestClass.test_viterbi_huge (2)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python/tests/Handin 3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="MLAU" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/tests/Handin 3/test_hmm.py" />
+      <option name="CLASS_NAME" value="HMMTestClass" />
+      <option name="METHOD_NAME" value="test_viterbi_huge" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest HMMTestClass.test_viterbi_huge (3)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python/tests/Handin 3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="MLAU" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/tests/Handin 3/test_hmm.py" />
+      <option name="CLASS_NAME" value="HMMTestClass" />
+      <option name="METHOD_NAME" value="test_viterbi_huge" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="hmmlearner" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python/src/Handin 3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="MLAU" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/src/Handin 3/hmmlearner.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -483,19 +520,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest HMMTestClass.test_viterbi" />
-      <item index="1" class="java.lang.String" itemvalue="Python.hmm" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest HMMTestClass.test_viterbi (3)" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest HMMTestClass.test_viterbi (4)" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest HMMTestClass.test_viterbi_small" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest HMMTestClass.test_viterbi_small" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest HMMTestClass.test_viterbi_huge (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest HMMTestClass.test_viterbi_huge (2)" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest HMMTestClass.test_viterbi_huge (3)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.hmmlearner" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest HMMTestClass.test_viterbi_small" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest HMMTestClass.test_viterbi" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest HMMTestClass.test_viterbi (4)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.hmm" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest HMMTestClass.test_viterbi (3)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.hmmlearner" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest HMMTestClass.test_viterbi_small" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest HMMTestClass.test_viterbi_huge (3)" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest HMMTestClass.test_viterbi_huge (2)" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest HMMTestClass.test_viterbi_huge (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -516,51 +553,51 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_HMMTestClass_test_viterbi_small - 2016.11.24 at 21h 36m 37s.xml">
+    <history-entry file="Unittest_HMMTestClass_test_viterbi_huge - 2016.11.27 at 00h 11m 25s.xml">
+      <configuration name="Unittest HMMTestClass.test_viterbi_huge" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittest_HMMTestClass_test_viterbi_huge_(1) - 2016.11.27 at 00h 11m 36s.xml">
+      <configuration name="Unittest HMMTestClass.test_viterbi_huge (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittest_HMMTestClass_test_viterbi_huge_(2) - 2016.11.27 at 00h 11m 41s.xml">
+      <configuration name="Unittest HMMTestClass.test_viterbi_huge (2)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittest_HMMTestClass_test_viterbi_huge_(3) - 2016.11.27 at 00h 11m 46s.xml">
+      <configuration name="Unittest HMMTestClass.test_viterbi_huge (3)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittest_HMMTestClass_test_viterbi_small - 2016.11.27 at 00h 08m 04s.xml">
       <configuration name="Unittest HMMTestClass.test_viterbi_small" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_HMMTestClass_test_viterbi_small - 2016.11.24 at 21h 36m 50s.xml">
+    <history-entry file="Unittest_HMMTestClass_test_viterbi_small - 2016.11.27 at 00h 10m 47s.xml">
       <configuration name="Unittest HMMTestClass.test_viterbi_small" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_HMMTestClass_test_viterbi_small - 2016.11.24 at 21h 36m 58s.xml">
+    <history-entry file="Unittest_HMMTestClass_test_viterbi_small - 2016.11.27 at 00h 11m 14s.xml">
       <configuration name="Unittest HMMTestClass.test_viterbi_small" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_HMMTestClass_test_viterbi_small - 2016.11.24 at 21h 37m 28s.xml">
+    <history-entry file="Unittest_HMMTestClass_test_viterbi_small - 2016.11.27 at 00h 12m 45s.xml">
       <configuration name="Unittest HMMTestClass.test_viterbi_small" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_HMMTestClass_test_viterbi_small - 2016.11.24 at 21h 38m 33s.xml">
-      <configuration name="Unittest HMMTestClass.test_viterbi_small" configurationId="tests" />
+    <history-entry file="Unittests_in_HMMTestClass - 2016.11.27 at 00h 07m 18s.xml">
+      <configuration name="Unittests in HMMTestClass" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_HMMTestClass_test_viterbi_small - 2016.11.24 at 21h 38m 42s.xml">
-      <configuration name="Unittest HMMTestClass.test_viterbi_small" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_HMMTestClass_test_viterbi_small - 2016.11.24 at 21h 39m 04s.xml">
-      <configuration name="Unittest HMMTestClass.test_viterbi_small" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_HMMTestClass_test_viterbi_small - 2016.11.24 at 21h 39m 21s.xml">
-      <configuration name="Unittest HMMTestClass.test_viterbi_small" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_HMMTestClass_test_viterbi_small - 2016.11.24 at 21h 39m 31s.xml">
-      <configuration name="Unittest HMMTestClass.test_viterbi_small" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittest_HMMTestClass_test_viterbi_small - 2016.11.24 at 21h 39m 39s.xml">
-      <configuration name="Unittest HMMTestClass.test_viterbi_small" configurationId="tests" />
+    <history-entry file="Unittests_in_HMMTestClass_(1) - 2016.11.27 at 00h 08m 36s.xml">
+      <configuration name="Unittests in HMMTestClass (1)" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1831" height="912" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2539596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25723648" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32212028" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3691756" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3213859" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31780168" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959569" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33716077" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39784947" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3975535" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -597,54 +634,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="31" />
+      <option name="time" value="58" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Python/src/Handin 2/visualization/visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Python/src/Handin 2/validation/ModelEvaluator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Python/src/Handin 2/main/nnprediction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Python/src/Handin 2/tensorflow_learner/TensorflowLearner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Python/src/Handin 2/scikitlearner/scikit_learner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" column="78" selection-start-line="21" selection-start-column="78" selection-end-line="21" selection-end-column="78" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Python/src/Handin 1/softmaxregression.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1215">
@@ -688,9 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -755,9 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -797,9 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -815,9 +800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -877,19 +859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Python/src/Handin 2/handin/handin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1500">
-          <caret line="101" column="33" selection-start-line="101" selection-start-column="33" selection-end-line="101" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -905,7 +874,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12975">
           <caret line="901" column="0" selection-start-line="901" selection-start-column="0" selection-end-line="901" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -963,7 +931,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -971,9 +941,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -993,31 +960,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Python/src/Handin 3/hmm.py">
+    <entry file="file://$PROJECT_DIR$/Python/src/Handin 2/handin/handin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="106" column="16" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
+        <state relative-caret-position="60">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/tensorflow/lib/python3.5/unittest/suite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda3/envs/tensorflow/lib/python3.5/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="602" column="35" selection-start-line="602" selection-start-column="35" selection-end-line="602" selection-end-column="35" />
+        <state relative-caret-position="217">
+          <caret line="601" column="0" selection-start-line="601" selection-start-column="0" selection-end-line="601" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Python/tests/Handin 3/test_hmm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        <state relative-caret-position="30">
+          <caret line="2" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/src/Handin 3/compare_anns.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1740">
+          <caret line="116" column="19" selection-start-line="116" selection-start-column="19" selection-end-line="116" selection-end-column="19" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#729#738#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/src/Handin 3/faste_file_reader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/src/Handin 3/hmm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="140" column="8" selection-start-line="140" selection-start-column="8" selection-end-line="140" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/src/Handin 3/data/annotation3.fa">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29520">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/src/Handin 3/hmmlearner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
