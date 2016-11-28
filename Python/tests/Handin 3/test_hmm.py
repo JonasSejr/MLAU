@@ -1,8 +1,8 @@
 import unittest
 import numpy as np
 
-from hmm import viterbi_backtrack
 from hmm import logspace_viterbi_backtrack
+from hmmlearner import convert_to_states
 
 
 class HMMTestClass(unittest.TestCase):
@@ -24,3 +24,19 @@ class HMMTestClass(unittest.TestCase):
         self.assertEqual(expectedLogProb, prob, 0.001)
         self.assertEqual(expectedVitAsString, hidden)
 
+    def test_convert_to_states_simple(self):
+        annotation = ["N", "C", "C", "C", "N"]
+        expected_states = ["S1", "S2","S3","S4","S1"]
+        self.assertEqual(expected_states, convert_to_states(annotation))
+
+
+    def test_convert_to_states_simple_reverse(self):
+        annotation = ["N", "R", "R", "R", "N"]
+        expected_states = ["S1", "S5", "S6", "S7", "S1"]
+        self.assertEqual(expected_states, convert_to_states(annotation))
+
+
+    def test_convert_to_states_bulk(self):
+        annotation = ["N", "C", "C", "C", "N", "R", "R", "R", "N"]
+        expected_states = ["S1", "S2", "S3", "S4", "S1", "S5", "S6", "S7", "S1"]
+        self.assertEqual(expected_states, convert_to_states(annotation))
