@@ -104,20 +104,20 @@ def print_all(true, pred):
         print_stats(tp, fp, tn, fn)
     
 # Read true annotation
-true_ann = read_ann(sys.argv[1])
+#true_ann = read_ann(sys.argv[1])
 
 # Read predicted annotations
-pred_ann = read_ann(sys.argv[2])
+#pred_ann = read_ann(sys.argv[2])
 
 # Check annoation length
-error = 0
-if len(true_ann) != len(pred_ann):
-    print("ERROR: The lengths of two predictions are different")
-    print("Expected %d, but found %d" % (len(true_ann), len(pred_ann)))
-    sys.exit(1)    
+#error = 0
+#if len(true_ann) != len(pred_ann):
+#    print("ERROR: The lengths of two predictions are different")
+#    print("Expected %d, but found %d" % (len(true_ann), len(pred_ann)))
+#    sys.exit(1)
 
 # Print stats
-print_all(true_ann, pred_ann)
+#print_all(true_ann, pred_ann)
 
 
         

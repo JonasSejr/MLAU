@@ -1,11 +1,10 @@
 import sys
 import math
 
-observables = {'A':0, 'C':1, 'G':2, 'T':3}
-states = {'1':0, '2': 1, '3':2, '4':3, '5':4, '6':5, '7':6}
-
 class ViterbiPredictor:
-    def __init__(self, init_probs, trans_probs, emit_probs):
+    def __init__(self, observables, states, init_probs, trans_probs, emit_probs):
+        self.observables = observables
+        self.states = states
         self.init_probs = init_probs
         self.trans_probs = trans_probs
         self.emit_probs = emit_probs
@@ -26,8 +25,8 @@ class ViterbiPredictor:
 
     def calculateJointProbability(self, obs, hid):
         # Get sequence of observables and hidden states from the commandline
-        x = [observables[c] for c in obs]
-        z = [states[c] for c in hid]
+        x = [self.observables[c] for c in obs]
+        z = [self.states[c] for c in hid]
 
         if len(x) != len(z):
             print("The two sequences are of different length!")
@@ -46,8 +45,8 @@ class ViterbiPredictor:
     def logspace_backtrack_most_likely(self, w, observations):
         probability = -math.inf
         Z = ['E' for x in range(len(observations))] #E for empty
-        for state in states.keys():
-            stateIndex = states.get(state)
+        for state in self.states.keys():
+            stateIndex = self.states.get(state)
             probEndingWithThisState = w[stateIndex][-1]
             if(probability < probEndingWithThisState):
                 probability = probEndingWithThisState
@@ -55,24 +54,24 @@ class ViterbiPredictor:
         probOfHidden = probability
         for column in reversed(range(0, len(observations) - 1)):
             maxProb = -math.inf
-            for state in states.keys():
-                stateIndex = states.get(state)
-                nextStateIndex = states[Z[column + 1]]
+            for state in self.states.keys():
+                stateIndex = self.states.get(state)
+                nextStateIndex = self.states[Z[column + 1]]
                 probability = w[stateIndex][column] + \
                               self.log(self.trans_probs[stateIndex][nextStateIndex]) + \
-                              self.log(self.emit_probs[nextStateIndex][observables[observations[column + 1]]])
+                              self.log(self.emit_probs[nextStateIndex][self.observables[observations[column + 1]]])
                 if probability > maxProb:
                     Z[column] = state
                     maxProb = probability
-        return probOfHidden, ''.join(Z)
+        return probOfHidden, Z
 
 
 
     def backtrack_most_likely(self, w, observations):
         probability = 0
         Z = ['E' for x in range(len(observations))] #E for empty
-        for state in states.keys():
-            stateIndex = states.get(state)
+        for state in self.states.keys():
+            stateIndex = self.states.get(state)
             probEndingWithThisState = w[stateIndex][-1]
             if(probability < probEndingWithThisState):
                 probability = probEndingWithThisState
@@ -80,12 +79,12 @@ class ViterbiPredictor:
         probOfHidden = probability
         for column in reversed(range(0, len(observations))):
             maxProb = 0
-            for state in states.keys():
-                stateIndex = states.get(state)
-                nextStateIndex = states[Z[column + 1]]
+            for state in self.states.keys():
+                stateIndex = self.states.get(state)
+                nextStateIndex = self.states[Z[column + 1]]
                 probability = w[stateIndex][column] * \
                               self.trans_probs[stateIndex][nextStateIndex] * \
-                              self.emit_probs[nextStateIndex][observables[observations[column + 1]]]
+                              self.emit_probs[nextStateIndex][self.observables[observations[column + 1]]]
                 if probability > maxProb:
                     Z[column] = state
                     maxProb = probability
@@ -93,18 +92,18 @@ class ViterbiPredictor:
 
 
     def create_matrix(self, observations):
-        w = [[0 for x in range(len(observations))] for y in range(len(states))]
-        for state in states.keys():
-            stateIndex = states.get(state)
-            w[stateIndex][0] = self.init_probs[stateIndex] * self.emit_probs[stateIndex][observables[observations[0]]]
+        w = [[0 for x in range(len(observations))] for y in range(len(self.states))]
+        for state in self.states.keys():
+            stateIndex = self.states.get(state)
+            w[stateIndex][0] = self.init_probs[stateIndex] * self.emit_probs[stateIndex][self.observables[observations[0]]]
         for column in range(1, len(observations)):
             observation = observations[column]
-            observationIndex = observables[observation]
-            for currentState in states.keys():
-                currentStateIndex = states.get(currentState)
+            observationIndex = self.observables[observation]
+            for currentState in self.states.keys():
+                currentStateIndex = self.states.get(currentState)
                 maxProb = 0
-                for lastState in states.keys():
-                    lastStateIndex = states.get(lastState)
+                for lastState in self.states.keys():
+                    lastStateIndex = self.states.get(lastState)
                     probability = w[lastStateIndex][column - 1] * \
                                   self.trans_probs[lastStateIndex][currentStateIndex] * \
                                   self.emit_probs[currentStateIndex][observationIndex]
@@ -114,23 +113,24 @@ class ViterbiPredictor:
         return w
 
     def create_logspace_matrix(self, observations):
-        w = [[0 for x in range(len(observations))] for y in range(len(states))]
-        for state in states.keys():
-            stateIndex = states.get(state)
-            w[stateIndex][0] = self.log(self.init_probs[stateIndex]) + self.log(self.emit_probs[stateIndex][observables[observations[0]]])
+        w = [[0 for x in range(len(observations))] for y in range(len(self.states))]
+        for state in self.states.keys():
+            stateIndex = self.states.get(state)
+            w[stateIndex][0] = self.log(self.init_probs[stateIndex]) + self.log(self.emit_probs[stateIndex][self.observables[observations[0]]])
         for column in range(1, len(observations)):
+            if(column%100000 == 0):
+                print(column)
             observation = observations[column]
-            observationIndex = observables[observation]
-            for currentState in states.keys():
-                currentStateIndex = states.get(currentState)
+            observationIndex = self.observables[observation]
+            for currentState in self.states.keys():
+                currentStateIndex = self.states.get(currentState)
                 maxProb = -math.inf
-                for lastState in states.keys():
-                    lastStateIndex = states.get(lastState)
+                for lastState in self.states.keys():
+                    lastStateIndex = self.states.get(lastState)
                     probability = w[lastStateIndex][column - 1] + \
                                   self.log(self.trans_probs[lastStateIndex][currentStateIndex]) + \
                                   self.log(self.emit_probs[currentStateIndex][observationIndex])
                     maxProb = max(maxProb, probability)
-                print(column)
                 w[currentStateIndex][column] = maxProb
         return w
 

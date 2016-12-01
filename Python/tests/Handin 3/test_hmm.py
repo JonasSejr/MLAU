@@ -4,11 +4,15 @@ import faste_file_reader as fr
 from viterbi_prediction import ViterbiPredictor
 from hmmlearner import convert_to_states
 from hmmlearner import learn_hmm
+from hmmlearner import convert_to_annotations
 
 
 class ViterbiTest(unittest.TestCase):
     def __init__(self, *args, **kwargs):
         super(ViterbiTest, self).__init__(*args, **kwargs)
+        self.observables = {'A': 0, 'C': 1, 'G': 2, 'T': 3}
+        self.states = {'1': 0, '2': 1, '3': 2, '4': 3, '5': 4, '6': 5, '7': 6}
+
         self.init_probs = [0.00, 0.00, 0.00, 1.00, 0.00, 0.00, 0.00]
         self.trans_probs = [[0.00, 0.00, 0.90, 0.10, 0.00, 0.00, 0.00],
                       [1.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00],
@@ -25,7 +29,7 @@ class ViterbiTest(unittest.TestCase):
                      [0.30, 0.20, 0.30, 0.20],
                      [0.15, 0.30, 0.20, 0.35]]
 
-        self.predictor = ViterbiPredictor(self.init_probs, self.trans_probs, self.emit_probs)
+        self.predictor = ViterbiPredictor(self.observables, self.states, self.init_probs, self.trans_probs, self.emit_probs)
 
     def test_viterbi_small(self):
         obsAsString = "GTTTCCCAGTGTATATCGAGGGATACTACGTGCATAGTAACATCGGCCAA"
@@ -65,37 +69,24 @@ class TrainingTest(unittest.TestCase):
         self.assertEqual(expected_states, convert_to_states(annotation))
 
 class EndToEndTest(unittest.TestCase):
+    def __init__(self, *args, **kwargs):
+        super(EndToEndTest, self).__init__(*args, **kwargs)
+        self.observables = {'A': 0, 'C': 1, 'G': 2, 'T': 3}
+        self.states = {'S1': 0, 'S2': 1, 'S3': 2, 'S4': 3, 'S5': 4, 'S6': 5, 'S7': 6}
+
     def test_complete_prediction(self):
         training_filenames = ["./data/test_genome1.fa", "./data/test_annotation1.fa"]
         training_pairs = [["genome1", "annotation1"]]
         init_probs, transition_probs, emit_probs= learn_hmm(training_filenames, training_pairs)
 
-        predictor = ViterbiPredictor(init_probs, transition_probs, emit_probs)
+        predictor = ViterbiPredictor(self.observables, self.states, init_probs, transition_probs, emit_probs)
 
         test_gnome = fr.read_fasta_file(filename="./data/test_genome2.fa")["genome2"]
         test_annotation = fr.read_fasta_file(filename="./data/test_annotation2.fa")["annotation2"]
 
         prob, hidden = predictor.logspace_viterbi_backtrack(test_gnome)
-        hidden_list = list(hidden)
-        annotations_list = [0 for x in range(len(hidden_list))]
-        for i in range(len(hidden_list)):
-            state = hidden_list[i]
-            if state == "1":
-                annotations_list[i] = 'N'
-            elif state == "2":
-                annotations_list[i] = 'C'
-            elif state == "3":
-                annotations_list[i] = 'C'
-            elif state == "4":
-                annotations_list[i] = 'C'
-            elif state == "5":
-                annotations_list[i] = 'R'
-            elif state == "6":
-                annotations_list[i] = 'R'
-            elif state == "7":
-                annotations_list[i] = 'R'
+        annotations = convert_to_annotations(hidden)
 
-        print(''.join(annotations_list))
+        print(annotations)
         print(test_annotation)
-
         print(prob)

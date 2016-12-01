@@ -96,14 +96,24 @@ def learn_hmm(filenames, training_pairs):
     transition_probs = calculate_transition_probs(sequences, training_pairs)
     return init_probs, transition_probs, emit_probs
 
-filenames = ["./data/genome1.fa", "./data/genome2.fa", "./data/genome3.fa", "./data/genome4.fa",
-             "./data/genome5.fa",
-             "./data/annotation1.fa", "./data/annotation2.fa", "./data/annotation3.fa", "./data/annotation4.fa",
-             "./data/annotation5.fa"]
 
-training_pairs = [
-    ["genome1", "annotation1"],
-    ["genome2", "annotation2"],
-    ["genome3", "annotation3"],
-    ["genome4", "annotation4"],
-    ["genome5", "annotation5"]]
+def convert_to_annotations(hidden_list):
+    annotations_list = [0 for x in range(len(hidden_list))]
+    for i in range(len(hidden_list)):
+        state = hidden_list[i]
+        if state == "S1":
+            annotations_list[i] = 'N'
+        elif state == "S2":
+            annotations_list[i] = 'C'
+        elif state == "S3":
+            annotations_list[i] = 'C'
+        elif state == "S4":
+            annotations_list[i] = 'C'
+        elif state == "S5":
+            annotations_list[i] = 'R'
+        elif state == "S6":
+            annotations_list[i] = 'R'
+        elif state == "S7":
+            annotations_list[i] = 'R'
+    return annotations_list
+
