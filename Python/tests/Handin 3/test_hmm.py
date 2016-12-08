@@ -1,11 +1,7 @@
 import unittest
-
-import faste_file_reader as fr
 from viterbi_prediction import ViterbiPredictor
-from hmmlearner import convert_to_states
-from hmmlearner import learn_hmm
-from hmmlearner import convert_to_annotations
-
+from AnnotationConverter import AnnotationConverter
+from annotation_converter_with_codon import AnnotationConverterWithCodons
 
 class ViterbiTest(unittest.TestCase):
     def __init__(self, *args, **kwargs):
@@ -50,43 +46,45 @@ class ViterbiTest(unittest.TestCase):
         self.assertEqual(expectedVitAsString, hidden)
 
 
-class TrainingTest(unittest.TestCase):
-    def test_convert_to_states_simple(self):
-        annotation = ["N", "C", "C", "C", "N"]
-        expected_states = ["S1", "S2","S3","S4","S1"]
-        self.assertEqual(expected_states, convert_to_states(annotation))
-
-
-    def test_convert_to_states_simple_reverse(self):
-        annotation = ["N", "R", "R", "R", "N"]
-        expected_states = ["S1", "S5", "S6", "S7", "S1"]
-        self.assertEqual(expected_states, convert_to_states(annotation))
-
-
-    def test_convert_to_states_bulk(self):
-        annotation = ["N", "C", "C", "C", "N", "R", "R", "R", "N"]
-        expected_states = ["S1", "S2", "S3", "S4", "S1", "S5", "S6", "S7", "S1"]
-        self.assertEqual(expected_states, convert_to_states(annotation))
-
-class EndToEndTest(unittest.TestCase):
+class TestConversion(unittest.TestCase):
     def __init__(self, *args, **kwargs):
-        super(EndToEndTest, self).__init__(*args, **kwargs)
-        self.observables = {'A': 0, 'C': 1, 'G': 2, 'T': 3}
-        self.states = {'S1': 0, 'S2': 1, 'S3': 2, 'S4': 3, 'S5': 4, 'S6': 5, 'S7': 6}
+        super(TestConversion, self).__init__(*args, **kwargs)
+        self.converter = AnnotationConverter()
+        self.converter_with_codon = AnnotationConverterWithCodons()
 
-    def test_complete_prediction(self):
-        training_filenames = ["./data/test_genome1.fa", "./data/test_annotation1.fa"]
-        training_pairs = [["genome1", "annotation1"]]
-        init_probs, transition_probs, emit_probs= learn_hmm(training_filenames, training_pairs)
+    def test_convert_to_states_simple(self):
+        annotations = ["N", "C", "C", "C", "N"]
+        observations = ["A", "C", "G", "T", "A"]
+        expected_states = ["S1", "S2","S3","S4","S1"]
+        expected_all_states = {"S1":0, "S2":1, "S3":2,"S4":3}
+        expected_observables = {"A": 0, "C": 1, "G": 2, "T": 3}
+        expected_state_to_annotation = {"S1": "N", "S2": "C", "S3": "C", "S4": "C"}
+        expected_observations = ["A", "C", "G", "T", "A"]
+        all_states, observables, state_to_annotation, states, observations = self.converter.convert_to_states({}, {}, {}, annotations, observations)
+        self.assertEqual(expected_observations, observations)
+        self.assertEqual(expected_states, states)
+        self.assertEqual(expected_observables, observables)
+        self.assertEqual(expected_all_states, all_states)
+        self.assertEqual(expected_state_to_annotation, state_to_annotation)
 
-        predictor = ViterbiPredictor(self.observables, self.states, init_probs, transition_probs, emit_probs)
+    def test_convert_to_states_simple(self):
+        annotations = ["N", "C", "C", "C", "N"]
+        observations = ["A", "C", "G", "T", "A"]
+        expected_states = ["S1", "CS_CGT_1","CS_CGT_2","CS_CGT_3","S1"]
+        expected_all_states = {"S1":0, "CS_CGT_1":1, "CS_CGT_2":2,"CS_CGT_3":3}
+        expected_observables = {"A": 0, "C": 1, "G": 2, "T": 3}
+        expected_state_to_annotation = {"S1": "N", "CS_CGT_1": "C", "CS_CGT_2": "C", "CS_CGT_3": "C"}
+        expected_observations = ["A", "C", "G", "T", "A"]
+        all_states, observables, state_to_annotation, states, observations = self.converter_with_codon.convert_to_states({}, {}, {}, annotations, observations)
+        self.assertEqual(expected_observations, observations)
+        self.assertEqual(expected_states, states)
+        self.assertEqual(expected_observables, observables)
+        self.assertEqual(expected_all_states, all_states)
+        self.assertEqual(expected_state_to_annotation, state_to_annotation)
 
-        test_gnome = fr.read_fasta_file(filename="./data/test_genome2.fa")["genome2"]
-        test_annotation = fr.read_fasta_file(filename="./data/test_annotation2.fa")["annotation2"]
-
-        prob, hidden = predictor.logspace_viterbi_backtrack(test_gnome)
-        annotations = convert_to_annotations(hidden)
-
-        print(annotations)
-        print(test_annotation)
-        print(prob)
+    def test_convert_to_annotation_simple(self):
+        states = ["S1", "S2", "S3", "S4", "S1"]
+        state_to_annotation = {"S1": "N", "S2": "C", "S3": "C", "S4": "C"}
+        expected_annotations = ["N", "C", "C", "C", "N"]
+        annotations = self.converter.convert_to_annotations(state_to_annotation, states)
+        self.assertEqual(expected_annotations, annotations)

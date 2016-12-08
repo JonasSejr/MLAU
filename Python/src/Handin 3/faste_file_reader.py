@@ -1,3 +1,4 @@
+import textwrap
 def read_fasta_file(filename):
     """
     Reads the given FASTA file f and returns a dictionary of sequences.
@@ -22,3 +23,11 @@ def read_fasta_file(filename):
     for name, lines in sequences_lines.items():
         sequences[name] = ''.join(lines)
     return sequences
+
+def write_fasta(filename, name, sequence):
+    f = open(filename, 'w')
+    f.write(">" + name + '\n')  # python will convert \n to os.linesep
+    list_of_lines = textwrap.wrap(sequence, 60)
+    for line in list_of_lines:
+        f.write(line + '\n')
+    f.close()
