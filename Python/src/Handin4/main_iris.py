@@ -42,16 +42,6 @@ def plot_groups(x, group, fmt='.', **kwargs):
     plot_matrix(x1, x2, group, fmt, **kwargs)
 
 
-# data_2d = data[:, 1:3]
-# plot_groups(data_2d, labels, {0: 'o', 1: 's', 2: '^'}, figsize=(4, 4))
-# plt.show()
-
-# plot_matrix(data, data, labels, {0: 'o', 1: 's', 2: '^'}, figsize=(6, 6))
-# plt.show()
-# Plot
-# plot_groups(data_pca, labels, {0: 'o', 1: 's', 2: '^'}, figsize=(4, 4))
-# plt.show()
-
 def main():
     plt.interactive(False)
     iris = sklearn.datasets.load_iris()
@@ -60,6 +50,8 @@ def main():
     pca = sklearn.decomposition.PCA(2)
     data_pca = pca.fit_transform(data)
 
-    kmeans(data_pca, 3, 0.001)
+    estimated_labels, centers = kmeans(data_pca, 3, 0.001)
+    plot_groups(data_pca, estimated_labels, {0: 'o', 1: 's', 2: '^'}, figsize=(4, 4))
+    plt.show()
 
 main()

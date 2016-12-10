@@ -24,11 +24,10 @@ def kmeans_cost(data, centers, rep):
     k, d_ = centers.shape
     assert d == d_
     assert rep.shape == (n,)
-
-    # Insert your code here
-    data_rep = centers[rep]
-    cost = ...
-
+    cos = 0
+    for i in range(len(data)):
+        cos = cos + np.linalg.norm(data[i] - centers[rep[i]])
+    #data_rep = centers[rep]
     return cos
 
 def kmeans(data, k, epsilon):
@@ -40,24 +39,30 @@ def kmeans(data, k, epsilon):
 
     tired = False
     old_centers = np.zeros_like(centers)
+    iteration_index = 0
     while not tired:
+        print(iteration_index)
         old_centers[:] = centers
-        clusters = [np.array() for i in range(k)]
-
-        for point in data:
+        clusters = [[] for i in range(k)]#Lists can be added to in constant time. np.arrays cannot. They are copied each time
+        labels = np.zeros(n)
+        for i in range(len(data)):
             min_norm = math.inf
             closest_center_index = None
+            point = data[i]
             for center_index in range(len(centers)):
                 norm = np.linalg.norm(point - centers[center_index])
                 if norm < min_norm:
                     min_norm = norm
                     closest_center_index = center_index
-            clusters[closest_center_index].append(point)#This is slow. Find a better solution
+            clusters[closest_center_index].append(point)
+            labels[i] = closest_center_index
 
+        for i in range(len(clusters)):
+            centers[i] = np.mean(clusters[i])
 
-
-
+        print(kmeans_cost(data, centers, labels))
         dist = np.sqrt(((centers - old_centers) ** 2).sum(axis=1))
         tired = np.max(dist) <= epsilon
+        iteration_index = iteration_index + 1
 
-    return centers
+    return labels, centers
