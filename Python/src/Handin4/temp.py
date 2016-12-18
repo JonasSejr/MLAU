@@ -23,5 +23,3 @@ plt.show()
 
 plt.imshow(img_stairs)
 plt.show()
-
-

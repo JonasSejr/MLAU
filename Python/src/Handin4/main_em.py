@@ -1,9 +1,10 @@
-import numpy as np
 import matplotlib.pyplot as plt
+from scipy.misc import imread
+import numpy as np
 import sklearn.decomposition
 import sklearn.datasets
-from src.Handin4.kmeans import kmeans
-
+from src.Handin4.em import em
+from src.Handin4.em import most_likely
 def plot_matrix(x, y, group, fmt='.', **kwargs):
     """
     Given two d-dimensional datasets of n points,
@@ -50,7 +51,11 @@ def main():
     pca = sklearn.decomposition.PCA(2)
     data_pca = pca.fit_transform(data)
 
-    estimated_labels, centers = kmeans(data_pca, 3, 0.001)
+
+
+    mean, cov, prior = em(data_pca, 3, 0.001)
+    #estimated_labels, centers = kmeans(data_pca, 3, 0.001)
+    estimated_labels = most_likely(data_pca, mean, cov, prior)
     plot_groups(data_pca, estimated_labels, {0: 'o', 1: 's', 2: '^'}, figsize=(4, 4))
     plt.show()
 
